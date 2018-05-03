@@ -1,0 +1,55 @@
+.container{
+
+}
+
+body{
+    background: url('../image/background.jpg');
+    margin: 5%;
+
+}
+
+.header{
+    color:#85ff9a;
+    width: 100%;
+}
+
+.container{
+
+}
+
+h1{
+
+}
+
+ul{
+    list-style-type: none;
+    wideth: 200px;
+
+}
+
+ul li{
+    margin: 25px;
+
+}
+
+.zz:hover{
+    background-color: #555;
+    color: white;
+}
+
+.menu{
+    border: medium solid #85ff9a;
+
+    font-size:larger;
+
+}
+
+.menu,.content{
+    float: left;
+}
+
+.content{
+    float: left;
+
+}
+
