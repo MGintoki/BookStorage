@@ -7,7 +7,7 @@ window.onload = function () {
         categories[i].onclick = function () {
 
             var xmlhttp = new XMLHttpRequest();
-            var url = "/storage/servlet/ShowBookServlet?cid=" + this.id;
+            var url = "ShowBookServlet?cid=" + this.id;
             xmlhttp.open("GET", url, true);
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {

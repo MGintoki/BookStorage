@@ -13,21 +13,21 @@
     </filter-mapping>
 
 
-    <servlet>
-        <servlet-name>loginServlet</servlet-name>
-        <servlet-class>storage.servlet.LoginServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>showBookServlet</servlet-name>
-        <servlet-class>storage.servlet.ShowBookServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>loginServlet</servlet-name>
-        <url-pattern>/storage/servlet/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>showBookServlet</servlet-name>
-        <url-pattern>/storage/servlet/ShowBookServlet</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>loginServlet</servlet-name>-->
+        <!--<servlet-class>storage.servlet.LoginServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+        <!--<servlet-name>showBookServlet</servlet-name>-->
+        <!--<servlet-class>storage.servlet.ShowBookServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>loginServlet</servlet-name>-->
+        <!--<url-pattern>/LoginServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>showBookServlet</servlet-name>-->
+        <!--<url-pattern>/ShowBookServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
 
 </web-app>

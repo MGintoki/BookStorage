@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /**
  * Created by zzz on 2018/5/1.
  */
-@WebServlet(name = "ShowBookServlet")
+@WebServlet(urlPatterns = "/ShowBookServlet")
 public class ShowBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
