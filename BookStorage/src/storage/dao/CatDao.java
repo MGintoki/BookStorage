@@ -26,7 +26,7 @@ public class CatDao {
             C3P0Utils c3P0Utils = new C3P0Utils();
 
             QueryRunner queryRunner = new QueryRunner(c3P0Utils.getDataSource());
-            String sql = "select * from Category";
+            String sql = "select * from category";
             Object[] params = {};
 
             /**

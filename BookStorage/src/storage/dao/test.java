@@ -2,7 +2,9 @@ package storage.dao;
 
 import storage.domain.Book;
 import storage.domain.Category;
+import storage.domain.User;
 
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -11,16 +13,13 @@ import java.util.LinkedList;
  */
 public class test {
     public static void main(String[] args) {
-        BookDao BookDao = new BookDao();
-        ArrayList<Book> books = BookDao.getBookArrayList(2);
-        for (Book book:books
-             ) {
-            System.out.println(book.getBid());
-        }
-        CatDao catDao = new CatDao();
-        ArrayList<Category> categories = catDao.getCatList();
-        for(Category category : categories){
-            System.out.println(category.getCid() + category.getcDescription() + category.getcName());
+       BookDao bookDao = new BookDao();
+
+        ArrayList<Book> books = bookDao.getBookArrayList(1);
+        for (Book b :
+                books) {
+            System.out.println(b.getAuthor());
         }
     }
+
 }

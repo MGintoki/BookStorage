@@ -11,6 +11,14 @@
         <filter-name>filterDemo</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!--<servlet>-->
+    <!--<servlet-name>loginServlet</servlet-name>-->
+    <!--<servlet-class>storage.servlet.LoginServlet</servlet-class>-->
+<!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>loginServlet</servlet-name>-->
+        <!--<url-pattern>/storage/servlet/LoginServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
 
 
     <!--<servlet>-->

@@ -12,9 +12,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-/**
- * Created by zzz on 2018/5/1.
- */
 @WebServlet(urlPatterns = "/ShowBookServlet")
 public class ShowBookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +29,7 @@ public class ShowBookServlet extends HttpServlet {
                  ) {
                 pw.write("<li class=\"item\"" + "id=" + ("" + b.getBid()) + ">");
                 pw.write("<div class=\"info\">");
-                pw.write("<img src=\"../image/" + b.getAuthor() +  "\" alt=\"pic\">");
+                pw.write("<img src=\"image/books" + b.getAuthor() +  "\" alt=\"pic\">");
                 pw.write("<p class=\"book-name\">" + b.getName() + "</p>");
                 pw.write("<p class=\"price\">");
                 pw.write("          <a class=\"search_discount\" style=\"text-decoration:none;\">定价：</a>\n" +
