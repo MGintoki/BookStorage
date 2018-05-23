@@ -1,8 +1,6 @@
 package storage.domain;
 
-/**
- * Created by zzz on 2018/5/1.
- */
+
 public class Book {
     private int bid;
     private int cid;

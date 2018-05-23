@@ -3,6 +3,7 @@ package storage.servlet;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayListHandler;
 import storage.dao.UserDao;
+import storage.domain.Book;
 import storage.domain.User;
 import storage.utils.C3P0Utils;
 import storage.utils.DataSourceUtils;
@@ -21,9 +22,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by zzz on 2018/4/30.
- */
+
 @WebServlet(name = "LoginServlet" , urlPatterns = "/LoginServlet")
 /**
  * 用来检测用户账户是否正确，暂时判断账户名密码相等为正确
@@ -50,9 +49,11 @@ public class LoginServlet extends HttpServlet {
             System.out.println("用户:" + user.getUserName() + "  " + user.getPassword());
             if (user.getUserName().equals(userName)) {
                 if (user.getPassword().equals(password)) {
-                    request.getSession().setAttribute("User", user);
-                    request.getSession().setAttribute("LoginState", "success");
-                    System.out.println(request.getSession().getAttribute("LoginState"));
+                    request.getSession().setAttribute("user", user);
+                    request.getSession().setAttribute("loginState", "success");
+                    ArrayList<Book> catBook = new ArrayList<>();
+                    request.getSession().setAttribute("catBook", catBook);
+                    System.out.println(request.getSession().getAttribute("loginState"));
                     System.out.println("1");
                     response.sendRedirect("index.jsp");
                     return;

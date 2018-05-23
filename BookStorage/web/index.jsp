@@ -11,8 +11,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>Title</title>
+  <title>homePage</title>
   <link rel="stylesheet" type="text/css" href="css/bookStyle2.0.css">
+  <link rel="stylesheet" type="text/css" href="css/showBook.css">
   <script src="./js/ajax.js"></script>
 </head>
 <script>
@@ -26,11 +27,17 @@
   String loginDisplay2 = "display: none";
   String loginDisplay = "";
   String userName = "";
+  String loginState = "";
+  User user = new User();
   if(session.getAttribute("loginState") != null){
     loginDisplay = "display: none";
     loginDisplay2 = "";
-    userName = (String)session.getAttribute("userName");
+    loginState = "success";
+    if(session.getAttribute("user") != null){
+      user = (User)session.getAttribute("user");
+      userName = user.getUserName();
 
+    }
   }
 
 
@@ -49,11 +56,13 @@
             </span>
 
     <ul class="top">
+      <li class="login" style="<%=loginDisplay2%>"><a href="">欢迎，<%=userName%></a></li>
+      <li class="login" style="<%=loginDisplay2%>"><a href="LoginOutServlet">登出</a></li>
       <li class="login" style="<%=loginDisplay%>"><a href="login1.jsp">登陆</a></li>
-      <li class="login" style="<%=loginDisplay2%>"><p>欢迎，<%=userName%></p></li>
-      <li class="login" style="<%=loginDisplay2%>"><a href="/LoginOutServlet">登陆</a></li>
-      <li><a href="#home">购物车</a></li>
-      <li><a href="#contact">我的订单</a></li>
+
+      <li><a href="cat.jsp">购物车</a></li>
+      <li><a href="showOrder.jsp">我的订单</a></li>
+      <li><a href="admin.jsp">管理员入口</a></li>
       <li class="about"><a href="https://mgintoki.github.io/">关于</a></li>
     </ul>
   </div>
@@ -81,21 +90,11 @@
       %>
 
   </div>
-  <div class="content" id="books">
-    <p class="demoContent">demosadddddddddddddddddddddddddddddddddddddddddddd</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
-    <p class="demoContent">demo</p>
+  <div class="content" id="books" style="margin: 100px 150px">
+   <h1>欢迎来到菜鸟书城</h1>
+  </div>
+  <div class="msg" id="msg" >
+    <p id="<%=loginState%>">zzzzzzzzzzzzz</p>
   </div>
 
 </div>

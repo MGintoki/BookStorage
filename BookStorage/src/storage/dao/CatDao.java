@@ -14,9 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by zzz on 2018/5/1.
- */
+
 public class CatDao {
 
     private ArrayList<Category> categoryArrayList = new ArrayList<>();
@@ -29,9 +27,7 @@ public class CatDao {
             String sql = "select * from category";
             Object[] params = {};
 
-            /**
-             *通过查阅资料，BeanListHandler返回的是一个ArrayList，进行类型转换就好。
-             */
+
             categoryArrayList = (ArrayList<Category>) queryRunner.query(sql, new BeanListHandler<Category>(Category.class));
 
 

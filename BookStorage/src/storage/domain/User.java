@@ -1,8 +1,6 @@
 package storage.domain;
 
-/**
- * Created by zzz on 2018/4/30.
- */
+
 public class User {
     private int id;
     private String userName;

@@ -4,9 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-/**
- * Created by zzz on 2018/5/1.
- */
+
 @WebFilter(filterName = "FilterDemo")
 public class FilterDemo implements Filter {
     public void destroy() {
